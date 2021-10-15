@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>colouraw</title>
+    <script src="codes.js"></script>
+    <script src="app.js"></script>
+    <title>Colouraw</title>
 </head>
-<body>
+
+<body onload="loadPalettes()">
     <header>
         <nav>
             <div>
@@ -20,26 +24,19 @@
                     <li><a href="#">About</a></li>
                     <li><a href="#">Preset</a></li>
                 </ul>
-            </div>      
+            </div>
         </nav>
     </header>
 
-<div class="title-main">
-    <h2 class="rotate">Colouraw</h2>
-    <h2>palette.</h2>
-</div> 
+    <div class="title-main">
+        <h2 class="rotate">Colouraw</h2>
+        <h2>palette.</h2>
+    </div>
 
     <main>
-        <div class="container">
+        <div class="container" id="petti">
 
-            <div class="color-content">
-                <div class="color" style="background-color: #e63946;"></div>
-                <div class="color" style="background-color: #a8dadc;"></div>
-                <div class="color" style="background-color: #1d3557;"></div>
-                <div class="color" style="background-color: #fdffb6;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-            </div>            
-
+            <!-- 
             <div class="color-content">
                 <div class="color" style="background-color: #7f7f7f;"></div>
                 <div class="color" style="background-color: #f2f2f2;"></div>
@@ -77,269 +74,12 @@
                 <div class="color" style="background-color: #684e86;"></div>
                 <div class="color" style="background-color: #a1bd26;"></div>
                 <div class="color" style="background-color: #a1bd26;"></div>
-            </div>
-
-            <div class="color-content">
-                <div class="color" style="background-color: #a1bd26;"></div>
-                <div class="color" style="background-color: #44864d;"></div>
-                <div class="color" style="background-color: #2a8653;"></div>
-                <div class="color" style="background-color: #552a86;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-            </div>
-
-            <div class="color-content">
-                <div class="color" style="background-color: #862a2a;"></div>
-                <div class="color" style="background-color: #b993b9;"></div>
-                <div class="color" style="background-color: #b4c93d;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-            </div>
-
-            <div class="color-content">
-                <div class="color" style="background-color: #862a2a;"></div>
-                <div class="color" style="background-color: #2a8653;"></div>
-                <div class="color" style="background-color: #552a86;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-            </div>
-            <div class="color-content">
-                <div class="color" style="background-color: #862a2a;"></div>
-                <div class="color" style="background-color: #2a8653;"></div>
-                <div class="color" style="background-color: #552a86;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-            </div>
-
-            <div class="color-content">
-                <div class="color" style="background-color: #515f8d7e;"></div>
-                <div class="color" style="background-color: #e4db64b6;"></div>
-                <div class="color" style="background-color: #684e86;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-            </div>
-
-            <div class="color-content">
-                <div class="color" style="background-color: #a1bd26;"></div>
-                <div class="color" style="background-color: #44864d;"></div>
-                <div class="color" style="background-color: #2a8653;"></div>
-                <div class="color" style="background-color: #552a86;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-            </div>
-
-            <div class="color-content">
-                <div class="color" style="background-color: #862a2a;"></div>
-                <div class="color" style="background-color: #b993b9;"></div>
-                <div class="color" style="background-color: #b4c93d;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-            </div>
-
-            <div class="color-content">
-                <div class="color" style="background-color: #862a2a;"></div>
-                <div class="color" style="background-color: #2a8653;"></div>
-                <div class="color" style="background-color: #552a86;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-            </div>
-            <div class="color-content">
-                <div class="color" style="background-color: #862a2a;"></div>
-                <div class="color" style="background-color: #2a8653;"></div>
-                <div class="color" style="background-color: #552a86;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-            </div>
-
-            <div class="color-content">
-                <div class="color" style="background-color: #515f8d7e;"></div>
-                <div class="color" style="background-color: #e4db64b6;"></div>
-                <div class="color" style="background-color: #684e86;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-            </div>
-
-            <div class="color-content">
-                <div class="color" style="background-color: #a1bd26;"></div>
-                <div class="color" style="background-color: #44864d;"></div>
-                <div class="color" style="background-color: #2a8653;"></div>
-                <div class="color" style="background-color: #552a86;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-            </div>
-
-            <div class="color-content">
-                <div class="color" style="background-color: #862a2a;"></div>
-                <div class="color" style="background-color: #b993b9;"></div>
-                <div class="color" style="background-color: #b4c93d;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-            </div>
-
-            <div class="color-content">
-                <div class="color" style="background-color: #862a2a;"></div>
-                <div class="color" style="background-color: #2a8653;"></div>
-                <div class="color" style="background-color: #552a86;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-            </div>
-            <div class="color-content">
-                <div class="color" style="background-color: #862a2a;"></div>
-                <div class="color" style="background-color: #2a8653;"></div>
-                <div class="color" style="background-color: #552a86;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-            </div>
-
-            <div class="color-content">
-                <div class="color" style="background-color: #515f8d7e;"></div>
-                <div class="color" style="background-color: #e4db64b6;"></div>
-                <div class="color" style="background-color: #684e86;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-            </div>
-
-            <div class="color-content">
-                <div class="color" style="background-color: #a1bd26;"></div>
-                <div class="color" style="background-color: #44864d;"></div>
-                <div class="color" style="background-color: #2a8653;"></div>
-                <div class="color" style="background-color: #552a86;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-            </div>
-
-            <div class="color-content">
-                <div class="color" style="background-color: #862a2a;"></div>
-                <div class="color" style="background-color: #b993b9;"></div>
-                <div class="color" style="background-color: #b4c93d;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-            </div>
-
-            <div class="color-content">
-                <div class="color" style="background-color: #862a2a;"></div>
-                <div class="color" style="background-color: #2a8653;"></div>
-                <div class="color" style="background-color: #552a86;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-            </div>
-            
-            <div class="color-content">
-                <div class="color" style="background-color: #515f8d7e;"></div>
-                <div class="color" style="background-color: #e4db64b6;"></div>
-                <div class="color" style="background-color: #684e86;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-            </div>
-
-            <div class="color-content">
-                <div class="color" style="background-color: #a1bd26;"></div>
-                <div class="color" style="background-color: #44864d;"></div>
-                <div class="color" style="background-color: #2a8653;"></div>
-                <div class="color" style="background-color: #552a86;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-            </div>
-
-            <div class="color-content">
-                <div class="color" style="background-color: #862a2a;"></div>
-                <div class="color" style="background-color: #b993b9;"></div>
-                <div class="color" style="background-color: #b4c93d;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-            </div>
-
-            <div class="color-content">
-                <div class="color" style="background-color: #862a2a;"></div>
-                <div class="color" style="background-color: #2a8653;"></div>
-                <div class="color" style="background-color: #552a86;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-            </div>
-            
-            <div class="color-content">
-                <div class="color" style="background-color: #e63946;"></div>
-                <div class="color" style="background-color: #a8dadc;"></div>
-                <div class="color" style="background-color: #1d3557;"></div>
-                <div class="color" style="background-color: #fdffb6;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-            </div>
-
-            <div class="color-content">
-                <div class="color" style="background-color: #7f7f7f;"></div>
-                <div class="color" style="background-color: #f2f2f2;"></div>
-                <div class="color" style="background-color: #f7c59f;"></div>
-                <div class="color" style="background-color: #552a86;"></div>
-                <div class="color" style="background-color: #004e89;"></div>
-            </div>
-
-            <div class="color-content">
-                <div class="color" style="background-color: #1b9aaa;"></div>
-                <div class="color" style="background-color: #b993b9;"></div>
-                <div class="color" style="background-color: #011627;"></div>
-                <div class="color" style="background-color: #ff9f1c;"></div>
-                <div class="color" style="background-color: #ffa200;"></div>
-            </div>
-
-            <div class="color-content">
-                <div class="color" style="background-color: #862a2a;"></div>
-                <div class="color" style="background-color: #2a8653;"></div>
-                <div class="color" style="background-color: #552a86;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-            </div>
-            <div class="color-content">
-                <div class="color" style="background-color: #862a2a;"></div>
-                <div class="color" style="background-color: #2a8653;"></div>
-                <div class="color" style="background-color: #552a86;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-            </div>
-
-            <div class="color-content">
-                <div class="color" style="background-color: #515f8d7e;"></div>
-                <div class="color" style="background-color: #e4db64b6;"></div>
-                <div class="color" style="background-color: #684e86;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-            </div>
-
-            <div class="color-content">
-                <div class="color" style="background-color: #a1bd26;"></div>
-                <div class="color" style="background-color: #44864d;"></div>
-                <div class="color" style="background-color: #2a8653;"></div>
-                <div class="color" style="background-color: #552a86;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-            </div>
-
-            <div class="color-content">
-                <div class="color" style="background-color: #862a2a;"></div>
-                <div class="color" style="background-color: #b993b9;"></div>
-                <div class="color" style="background-color: #b4c93d;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-            </div>
-
-            <div class="color-content">
-                <div class="color" style="background-color: #862a2a;"></div>
-                <div class="color" style="background-color: #2a8653;"></div>
-                <div class="color" style="background-color: #552a86;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-            </div>
-            <div class="color-content">
-                <div class="color" style="background-color: #862a2a;"></div>
-                <div class="color" style="background-color: #2a8653;"></div>
-                <div class="color" style="background-color: #552a86;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-            </div>
-
-            <div class="color-content">
-                <div class="color" style="background-color: #515f8d7e;"></div>
-                <div class="color" style="background-color: #e4db64b6;"></div>
-                <div class="color" style="background-color: #684e86;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-                <div class="color" style="background-color: #a1bd26;"></div>
-            </div>
+            </div>             
+        -->
 
         </div>
     </main>
 
 </body>
+
 </html>
