@@ -90,14 +90,12 @@ nav a:hover {
     margin: 2px;
 }
 
-.color:hover {
-    width: 100px;
-    border-radius: 5px;
-}
-
 .color-detail{
+    border-radius: 10px;
+    width: 100px;
+    padding: 10px;
     position: relative;
-    top: 50%;
+    top: -25px;
     left: 50%;
     opacity: 0;
     transform: translate(-50%,-50%);
@@ -107,6 +105,8 @@ nav a:hover {
 
 .color:hover > .color-detail{
     opacity: 1;
+    transform: translateX(5px);
+    transform: translateX(-5px);
 }
 
 .color-content {
@@ -145,6 +145,18 @@ nav a:hover {
 
 .details a {
     text-decoration: none;
+}
+
+.notification{
+    position: fixed;
+    top: 90%;
+    left: 50%;
+    padding: 10px;
+    z-index: 500;
+    transform: translate(-50%);
+    opacity: 0;
+    transform: scale(0);
+    transition: 500ms;
 }
 
 @media only screen and (max-width: 600px) {
